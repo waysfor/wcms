@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>咨询管理后台</title>
+<title>管理后台</title>
 <link rel="stylesheet" href="/public/manage/css/reset.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="/public/manage/css/style.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="/public/manage/css/invalid.css" type="text/css" media="screen" />	
@@ -26,6 +26,7 @@ $(document).ready(function(){
 				$(".button").removeAttr("disabled");
 				res = JSON.parse(res);
 				var info = '';
+				alert(res.stat);
 				if(res.stat == 0){
 					info = '登录成功 ... 请稍等';
 					$("#logininfo").html(info).show();
@@ -34,7 +35,6 @@ $(document).ready(function(){
 					info = '登录失败 请重试';
 					$("#logininfo").html(info).show();
 				}
-				alert(12);
 			},
 			error:	function(){
 				$(".button").removeAttr("disabled");
@@ -49,34 +49,33 @@ $(document).ready(function(){
 <body id="login">
     <div id="login-wrapper" class="png_bg">
         <div id="login-top">
-            <h1>Simpla Admin</h1>
+            <h1>后台管理</h1>
             <img id="logo" src="/public/manage/images/logo.png" alt="Simpla Admin logo" />
         </div>
         <div id="login-content">
             <form method="post">
                 <div class="notification information png_bg">
-                    <div>
-                        Just click "Sign In". No password needed.
+                    <div id="logininfo">
+                        请输入您的用户名和密码！
                     </div>
                 </div>
                 <p>
-                    <label>Username</label>
+                    <label>用户名：</label>
                     <input class="text-input" type="text" name="cname" />
                 </p>
                 <div class="clear"></div>
                 <p>
-                    <label>Password</label>
+                    <label>密码：</label>
                     <input class="text-input" type="password" name="cpwd" />
                 </p>
                 <div class="clear"></div>
                 <p id="remember-password">
-                    <input type="checkbox" />Remember me
+                    <input type="checkbox" />记住账户
                 </p>
                 <div class="clear"></div>
                 <p>
-                    <input class="button" type="submit" value="Sign In" />
+                    <input class="button" type="submit" value="登录" />
                 </p>
-                <p id="logininfo"></p>
             </form>
         </div>
     </div>
