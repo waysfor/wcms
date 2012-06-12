@@ -19,28 +19,27 @@ $(document).ready(function(){
 		var username = $("input[name=cname]").val();
 		var password = $("input[name=cpwd]").val();
 		$.ajax({
-			type:	"POST",
-			url:	"/manage/login",
-			data:	"username="+username+"&password="+password,
-			success:function(res){
-				$(".button").removeAttr("disabled");
-				res = JSON.parse(res);
-				var info = '';
-				alert(res.stat);
-				if(res.stat == 0){
-					info = '登录成功 ... 请稍等';
-					$("#logininfo").html(info).show();
-					widow.location.href = "/manage";
-				} else {
-					info = '登录失败 请重试';
-					$("#logininfo").html(info).show();
-				}
-			},
-			error:	function(){
-				$(".button").removeAttr("disabled");
-				var info = '网络故障 请稍后重试';
-				$("#logininfo").html(info).show();
-			}
+			type:		"POST",
+			url:		"/manage/login",
+			data:		{'cname':username,'cpwd':password},
+			dataType:	"JSON",
+			success:	function(res){
+							$(".button").removeAttr("disabled");
+							var info = '';
+							if(res.stat == 0){
+								info = '登录成功 ... 请稍等';
+								$("#logininfo").html(info).show();
+								widow.location.href = "/manage";
+							} else {
+								info = '登录失败 请重试';
+								$("#logininfo").html(info).show();
+							}
+						},
+			error:		function(){
+							$(".button").removeAttr("disabled");
+							var info = '网络故障 请稍后重试';
+							$("#logininfo").html(info).show();
+						}
 		});
 	});
 });
@@ -74,7 +73,7 @@ $(document).ready(function(){
                 </p>
                 <div class="clear"></div>
                 <p>
-                    <input class="button" type="submit" value="登录" />
+                    <input class="button" type="submit" onclick="javascript:return false" value="登录" />
                 </p>
             </form>
         </div>

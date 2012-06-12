@@ -63,7 +63,7 @@ class Manage extends CI_Controller {
 				);
 				$this->input->set_cookie($cookie);
 				$res['data'] = $user;
-			}
+			} 
 			echo json_encode($res);
 			exit;
 		} else {
