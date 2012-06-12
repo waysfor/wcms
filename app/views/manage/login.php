@@ -29,7 +29,7 @@ $(document).ready(function(){
 							if(res.stat == 0){
 								info = '登录成功 ... 请稍等';
 								$("#logininfo").html(info).show();
-								widow.location.href = "/manage";
+								window.location.href = "/manage";
 							} else {
 								info = '登录失败 请重试';
 								$("#logininfo").html(info).show();

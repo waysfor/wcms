@@ -25,7 +25,7 @@ class Manage extends CI_Controller {
 		}
 	}
 	function index(){
-		$this -> load ->view('manage/login');
+		$this -> load ->view('manage/index.php');
 	}
 	function login(){
 		if($this -> input -> is_post()){
