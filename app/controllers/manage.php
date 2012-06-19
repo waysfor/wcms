@@ -24,8 +24,18 @@ class Manage extends CI_Controller {
 			}
 		}
 	}
+	private function _nav(){
+		
+	}
 	function index(){
-		$this -> load ->view('manage/index.php');
+		$out = array();
+		$out['user']['id']   = $this->userid;
+		$out['user']['name'] = $this->username;
+		$out['user']['real'] = $this->realname;
+		$usercookie  = $this->input->cookie('user');
+		$usercookie  = json_decode($usercookie, true);
+		$out['user'] = array_merge($out['user'], $usercookie);
+		$this -> load ->view('manage/index.php',$out);
 	}
 	function login(){
 		if($this -> input -> is_post()){
@@ -45,12 +55,13 @@ class Manage extends CI_Controller {
 				$usersess['id'] = $user['id'];
 				$usersess['name'] = $user['username'];
 				$usersess['real'] = $user['realname'];
-				$this->session->set_userdata(array('user' => $usersess));	//role addtm lasttm lastip 写入到cookie
+				$this -> session -> set_userdata(array('user' => $usersess));	//role addtm lasttm lastip 写入到cookie
 				$usercookie = array();
 				$rolearray = $this->config->item('role');
 				$statusarray = $this->config->item('status');
 				$genderarray = $this->config->item('gender');
 				$usercookie['role'] = $rolearray[$role];
+				$usercookie['role_lv'] = $role;
 				$usercookie['addtm'] = date('Y-m-d H:i:s', $user['addtm']);
 				$usercookie['lasttm'] = date('Y-m-d H:i:s', $user['lasttm']);
 				$usercookie['lastip'] = long2ip($user['lastip']);
@@ -63,12 +74,28 @@ class Manage extends CI_Controller {
 				);
 				$this->input->set_cookie($cookie);
 				$res['data'] = $user;
-			} 
+			}
 			echo json_encode($res);
 			exit;
 		} else {
 			$this -> load ->view('manage/login');
 		}
+	}
+	function course_resource($act = '', $val = 0){
+	}
+	function logout(){
+		//清理session
+		$this->session->unset_userdata('user');
+		//清理cookie
+		$cookie = array(
+			'name'   => 'user',
+			'value'  => '',
+			'expire' => ''
+		);
+		$this->input->set_cookie($cookie);
+		//跳转到登录页
+		echo '<script>window.location.href="/manage/login";</script>';
+		exit;
 	}
 /*===========================================================
 		if($this -> userid <= 0) {
