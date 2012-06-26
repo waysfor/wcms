@@ -4,7 +4,7 @@ class Manage extends CI_Controller {
 	public $userid;
 	public $username;
 	public $realname;
-	public $myrole;
+	//public $myrole;
 	public $item;
 	function __construct(){
 		parent::__construct();
@@ -12,7 +12,7 @@ class Manage extends CI_Controller {
 		$this -> userid = isset($user['id']) ? $user['id'] : 0;
 		$this -> username = isset($user['name']) ? $user['name'] : 0;
 		$this -> realname = isset($user['real']) ? $user['real'] : 0;
-		$this -> myrole = isset($uer['role']) ? $uer['role'] : 0;
+		//$this -> myrole = isset($uer['role']) ? $uer['role'] : 0;
 		$this -> item = $this -> uri ->segment('2','0');
 		$this->config->load('manage');
 		
@@ -23,9 +23,21 @@ class Manage extends CI_Controller {
 				exit;
 			}
 		}
+		$this->_header();
 	}
 	private function _nav(){
-		
+		if($this -> item != 'login' && $this -> item != 'logout'){
+		$this -> load ->model('manage_model');
+		$out = $this -> manage_model -> menu();
+		$this -> load -> view('manage/frame/sider/menu', $out, true);
+		}
+	}
+	private function _header(){
+		if($this -> item != 'login' && $this -> item != 'logout'){
+			$header['nav'] = $this -> _nav();
+			$header['user']['id'] = $this -> userid;
+			$this->load->view('manage/frame/sider/menu', $header);
+		}
 	}
 	function index(){
 		$out = array();

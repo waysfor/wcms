@@ -32,7 +32,7 @@ h1            { font-family: Calibri, Helvetica, Arial, sans-serif; font-size: 3
 				
 h2            { font-size: 26px; padding: 0 0 10px 0; }
 h3            { font-size: 17px; padding: 0 0 10px 0; }
-h4            { font-size: 16px; padding: 0 0 5px 0; }
+h4            { font-size: 16px; padding: 0 0 5px 0; }	
 h5            { font-size: 14px; padding: 0 0 5px 0; }
 h6            { font-size: 12px; padding: 0 0 5px 0; }
 
@@ -149,6 +149,16 @@ a.remove-link:hover {
                 padding-bottom: 10px;
                 text-align: right;
                 }
+				
+#sidebar #main-nav li span.title{
+				font-size:18px;
+				color:#fff;
+				font-weight:bold;
+				display:block;
+				text-align:left;
+				line-height:32px;
+				border-bottom:1px solid #fff;
+				}
 
 #sidebar #main-nav li a.nav-top-item {
                 background: transparent url('../images/bg-menu-item-green.gif') right center no-repeat; /* Background image for default color scheme - green */

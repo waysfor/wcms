@@ -23,7 +23,7 @@
 				<?php include("frame/sider/logo.php");?>
 				<!-- Sidebar Profile links -->
 				<?php include("frame/sider/info.php");?>
-				<?php include("frame/sider/menu.php");?>
+				<?=$nav?>
 				<!-- End #main-nav -->
 				<?php include("frame/sider/message.php");?>
 				<!-- End #messages -->

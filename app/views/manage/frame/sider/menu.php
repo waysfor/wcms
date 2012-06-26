@@ -5,7 +5,7 @@
 						<a href="/manage" class="nav-top-item no-submenu"> <!-- Add the class "no-submenu" to menu items with no sub menu -->后台首页</a>
 					</li>
 					<li> 
-						<a href="#" class="nav-top-item current"> <!-- Add the class "current" to current menu item -->课程管理</a>
+						<a href="/history" class="nav-top-item current"> <!-- Add the class "current" to current menu item -->课程管理</a>
 						<ul>
 							<li><a href="#">课程查看</a></li>
 							<li><a class="current" href="#">课程添加</a></li> <!-- Add class "current" to sub menu items also -->
@@ -22,17 +22,42 @@
 							<li><a href="#">新闻搜索</a></li>
 						</ul>
 					</li>
+                    <li>
+                    	<span class="title">资源管理</span>
+                    </li>
 					<li>
 						<a href="#" class="nav-top-item">
-							资源管理
+							课程资源
 						</a>
 						<ul>
-							<li><a href="#">课程资源</a></li>
-							<li><a href="#">讲师资源</a></li>
-							<li><a href="#">客户资源</a></li>
-							<li><a href="#">资源搜索</a></li>
+							<li><a href="#">课程查看</a></li>
+							<li><a href="#">课程添加</a></li>
+							<li><a href="#">课程搜索</a></li>
 						</ul>
 					</li>
+					<li>
+						<a href="#" class="nav-top-item">
+							讲师资源
+						</a>
+						<ul>
+							<li><a href="#">讲师查看</a></li>
+							<li><a href="#">讲师添加</a></li>
+							<li><a href="#">讲师搜索</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="nav-top-item">
+							客户资源
+						</a>
+						<ul>
+							<li><a href="#">客户查看</a></li>
+							<li><a href="#">客户添加</a></li>
+							<li><a href="#">客户搜索</a></li>
+						</ul>
+					</li>
+                    <li>
+                    	<span class="title">工作助手</span>
+                    </li>
 					<li>
 						<a href="#" class="nav-top-item">
 							工作计划
