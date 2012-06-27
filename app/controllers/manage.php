@@ -26,19 +26,19 @@ class Manage extends CI_Controller {
 		$this->_header();
 	}
 	private function _nav(){
-		if($this -> item != 'login' && $this -> item != 'logout'){
 		$this -> load ->model('manage_model');
 		$out = $this -> manage_model -> menu();
-		$this -> load -> view('manage/frame/sider/menu', $out, true);
-		}
+		return $this -> load -> view('manage/frame/sider/menu', $out, true);
 	}
 	private function _header(){
 		if($this -> item != 'login' && $this -> item != 'logout'){
 			$header['nav'] = $this -> _nav();
 			$header['user']['id'] = $this -> userid;
-			$this->load->view('manage/frame/sider/menu', $header);
+			$this->load->view('manage/frame/header', $header);
 		}
 	}
+	/*
+	*/
 	function index(){
 		$out = array();
 		$out['user']['id']   = $this->userid;
@@ -77,7 +77,6 @@ class Manage extends CI_Controller {
 				$usercookie['addtm'] = date('Y-m-d H:i:s', $user['addtm']);
 				$usercookie['lasttm'] = date('Y-m-d H:i:s', $user['lasttm']);
 				$usercookie['lastip'] = long2ip($user['lastip']);
-				//$result = $this -> user_course_model -> edit_save($data,$con);
 				$usercookie = json_encode($usercookie);
 				$cookie = array(
 					'name'   => 'user',
@@ -109,89 +108,4 @@ class Manage extends CI_Controller {
 		echo '<script>window.location.href="/manage/login";</script>';
 		exit;
 	}
-/*===========================================================
-		if($this -> userid <= 0) {
-			if($this -> item != 'login' && $this -> item != 'logout') {
-				header("Localhost: /manage/login");
-				exit;
-			}
-		}
-
-
-
-	function index(){
-		if($this -> input -> is_post()){
-			echo '1';
-		} else {
-			$this -> load ->view('manage/login');
-		}
-	}
-	function login(){
-		var_dump('111');
-		var_dump($this->input->is_post());
-		exit;
-		if($this -> input -> is_post()){
-			$username = $this -> input -> post('username');
-			$password = $this -> input -> post('password');
-			$this -> load -> model('manage_model');
-			$user = $this -> manage_model -> login($username,$password);
-			$role = isset($user['role']) ? $user['role'] : 0;
-			$res = array();
-			$res['stat'] = 0;
-			$res['data'] = array();
-			if($role <= 0){
-				$res['stat'] = 1;
-			} else {
-				
-			}
-		} else {
-			$this -> load -> view('manage/login');
-		}
-	}
-
-
-
-	public $c_id;	//管理员的参数为c_;
-	public $item;
-	
-	function __construct() {
-		parent::__construct();
-		$this -> c_id = isset($c['id'])?$c['id']:0;
-		$this -> item = $this -> uri -> segment(2);
-		if($this -> c_id <= 0){
-			if($this -> item != 'login' && $this-> item != 'logout'){
-				header("Location: /manage/login");
-				exit;
-			}
-		}
-	}
-	private function _header() {
-		if($this -> item != 'login' && $this -> item != 'logout') {
-			$this -> load -> view('manage/header');
-		}
-	}
-
-	function index() {
-		$this->load->view('manage/index');
-	}
-	function login(){
-		if($this -> input -> is_post()){
-			$username = $this -> input -> post('username');
-			$password = $this -> input -> post('password');
-			$this -> load -> model('manage_model');
-			$user = $this -> manage_model -> login($username,$password);
-			$role = isset($user['role']) ? $user['role'] : 0;
-			$res = array();
-			$res['stat'] = 0;
-			$res['data'] = array();
-			if($role <= 0){
-				$res['stat'] = 1;
-			} else {
-				
-			}
-		} else {
-			$this -> load -> view('manage/login');
-		}
-	}
-=============================================================*/
 }
