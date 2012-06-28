@@ -25,6 +25,16 @@ class Manage extends CI_Controller {
 		}
 		$this->_header();
 	}
+	private function _userinfo(){
+		$out = array();
+		$out['user']['id']   = $this->userid;
+		$out['user']['name'] = $this->username;
+		$out['user']['real'] = $this->realname;
+		$usercookie  = $this->input->cookie('user');
+		$usercookie  = json_decode($usercookie, true);
+		$out['user'] = array_merge($out['user'], $usercookie);
+		return $out;
+	}
 	private function _nav(){
 		$this -> load ->model('manage_model');
 		$out = $this -> manage_model -> menu();
@@ -33,21 +43,14 @@ class Manage extends CI_Controller {
 	private function _header(){
 		if($this -> item != 'login' && $this -> item != 'logout'){
 			$header['nav'] = $this -> _nav();
-			$header['user']['id'] = $this -> userid;
+			$header['out'] = $this -> _userinfo();
 			$this->load->view('manage/frame/header', $header);
 		}
 	}
 	/*
 	*/
 	function index(){
-		$out = array();
-		$out['user']['id']   = $this->userid;
-		$out['user']['name'] = $this->username;
-		$out['user']['real'] = $this->realname;
-		$usercookie  = $this->input->cookie('user');
-		$usercookie  = json_decode($usercookie, true);
-		$out['user'] = array_merge($out['user'], $usercookie);
-		$this -> load ->view('manage/index.php',$out);
+		$this -> load ->view('manage/index.php');
 	}
 	function login(){
 		if($this -> input -> is_post()){
