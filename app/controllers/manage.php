@@ -25,7 +25,7 @@ class Manage extends CI_Controller {
 		}
 		$this->_header();
 	}
-	private function _userinfo(){
+	private function _userinfo(){				//后台用户登录信息
 		$out = array();
 		$out['user']['id']   = $this->userid;
 		$out['user']['name'] = $this->username;
@@ -80,6 +80,7 @@ class Manage extends CI_Controller {
 				$usercookie['addtm'] = date('Y-m-d H:i:s', $user['addtm']);
 				$usercookie['lasttm'] = date('Y-m-d H:i:s', $user['lasttm']);
 				$usercookie['lastip'] = long2ip($user['lastip']);
+				$this -> manage_model -> loginedit($user['id']);	//登录时间重新入库
 				$usercookie = json_encode($usercookie);
 				$cookie = array(
 					'name'   => 'user',

@@ -16,5 +16,10 @@ class Manage_model extends CI_Model{
 		$query = $this -> db -> query($sql);
 		return $query -> result_array();
 	}
+	
+	function loginedit($id){
+		$sql = "UPDATE  `member` SET  `lasttm` =  '".mktime()."' WHERE  `member`.`id` =".$id;
+		$this -> db -> query($sql);
+	}
 }
 ?>
