@@ -1,5 +1,10 @@
 			<div class="manage-menu">
 				<ul id="main-nav">
+				</ul>
+				<?=$nav?>
+				<? exit; ?>
+				<!--分割线-->
+				<ul id="main-nav">
 					<!-- Accordion Menu -->
 					<li>
 						<a href="/manage" class="nav-top-item no-submenu"> <!-- Add the class "no-submenu" to menu items with no sub menu -->后台首页</a>
