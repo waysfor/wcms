@@ -14,6 +14,7 @@
 </head>
 <script language="javascript">
 $(document).ready(function(){
+	$("input[name='cname']").focus();
 	$(".button").click(function(){
 		$(this).attr({"disabled":"disabled"});
 		var username = $("input[name=cname]").val();
@@ -60,20 +61,20 @@ $(document).ready(function(){
                 </div>
                 <p>
                     <label>用户名：</label>
-                    <input class="text-input" type="text" name="cname" />
+                    <input class="text-input" type="text" name="cname" tabindex="1" />
                 </p>
                 <div class="clear"></div>
                 <p>
                     <label>密码：</label>
-                    <input class="text-input" type="password" name="cpwd" />
+                    <input class="text-input" type="password" name="cpwd" tabindex="2" />
                 </p>
                 <div class="clear"></div>
                 <p id="remember-password">
-                    <input type="checkbox" />记住账户
+                    <input type="checkbox" tabindex="3" />记住账户
                 </p>
                 <div class="clear"></div>
                 <p>
-                    <input class="button" type="submit" onclick="javascript:return false" value="登录" />
+                    <input class="button" type="submit" onclick="javascript:return false" value="登录" tabindex="4" />
                 </p>
             </form>
         </div>

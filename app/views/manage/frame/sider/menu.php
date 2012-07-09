@@ -1,8 +1,10 @@
 			<div class="manage-menu">
 				<ul id="main-nav">
+					<?foreach ($menu as $item):?>
+					<li><a href="<?=$item["address"]?>" class="nav-top-item no-submenu"><?=$item['name']?></a></li>
+					<?endforeach?>
 				</ul>
 				<? var_dump($menu);?>
-				<? exit; ?>
 				<!--分割线-->
 				<ul id="main-nav">
 					<!-- Accordion Menu -->
