@@ -1,7 +1,7 @@
 			<div class="manage-menu">
 				<ul id="main-nav">
 				</ul>
-				<?=$nav?>
+				<? var_dump($menu);?>
 				<? exit; ?>
 				<!--分割线-->
 				<ul id="main-nav">
