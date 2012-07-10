@@ -1,19 +1,16 @@
 			<div class="manage-menu">
 				<ul id="main-nav">
-				<?foreach ($menu as $item):?>
-                    <li>
-					<? if(empty($item['tid'])){ ?>
-                    	<a href="<?=$item["address"]?>" class="nav-top-item no-submenu"><?=$item['name']?></a>
-                    <? } ?>
-                    	<? if($item['tid']=='1'){ ?>
-                    	<ul>
-                        	<li><a href=""><?=$item['name']?></a></li>
-                        </ul>
-                        <? } ?>
-                    </li>
+				<?foreach ($menu as $key=>$item):?>
+					<?if(!empty($item['tid'])){?>
+                    <li><?=$item['name'];?></li>
+					<ul>
+						<?foreach(explode(',',$item['tid']) as $sub):?>
+						<li><?=$sub?></li>
+						<?endforeach?>
+					</ul>
+					<?}?>
 				<?endforeach?>
 				</ul>
-				<? var_dump($menu);?>
 				<!--分割线-->
 				<ul id="main-nav">
 					<!-- Accordion Menu -->
