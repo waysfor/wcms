@@ -1,8 +1,17 @@
 			<div class="manage-menu">
 				<ul id="main-nav">
-					<?foreach ($menu as $item):?>
-					<li><a href="<?=$item["address"]?>" class="nav-top-item no-submenu"><?=$item['name']?></a></li>
-					<?endforeach?>
+				<?foreach ($menu as $item):?>
+                    <li>
+					<? if(empty($item['tid'])){ ?>
+                    	<a href="<?=$item["address"]?>" class="nav-top-item no-submenu"><?=$item['name']?></a>
+                    <? } ?>
+                    	<? if($item['tid']=='1'){ ?>
+                    	<ul>
+                        	<li><a href=""><?=$item['name']?></a></li>
+                        </ul>
+                        <? } ?>
+                    </li>
+				<?endforeach?>
 				</ul>
 				<? var_dump($menu);?>
 				<!--分割线-->
