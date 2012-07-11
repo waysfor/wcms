@@ -38,9 +38,6 @@ class Manage extends CI_Controller {
 	private function _nav(){
 		$this -> load ->model('manage_model');
 		$nav['menu'] = $this -> manage_model -> menu();
-		//define('test','1,2,3,4,5,6');
-		//var_dump(explode(',',test));
-		//exit;
 		return $this -> load -> view('manage/frame/sider/menu', $nav, true);
 	}
 	private function _header(){
