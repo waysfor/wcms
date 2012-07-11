@@ -1,94 +1,33 @@
 			<div class="manage-menu">
 				<ul id="main-nav">
 				<?foreach ($menu as $key=>$item):?>
-					<?if(!empty($item['tid'])){?>
-                    <li><?=$item['name'];?></li>
-					<ul>
-						<?foreach(explode(',',$item['tid']) as $sub):?>
-						<li><?=$sub?></li>
-						<?endforeach?>
-					</ul>
-					<?}?>
-				<?endforeach?>
-				</ul>
-				<!--分割线-->
-				<ul id="main-nav">
-					<!-- Accordion Menu -->
-					<li>
-						<a href="/manage" class="nav-top-item no-submenu"> <!-- Add the class "no-submenu" to menu items with no sub menu -->后台首页</a>
-					</li>
-					<li> 
-						<a href="/history" class="nav-top-item current"> <!-- Add the class "current" to current menu item -->课程管理</a>
-						<ul>
-							<li><a href="#">课程查看</a></li>
-							<li><a class="current" href="#">课程添加</a></li> <!-- Add class "current" to sub menu items also -->
-							<li><a href="#">课程搜索</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" class="nav-top-item">
-							新闻管理
-						</a>
-						<ul>
-							<li><a href="#">新闻查看</a></li>
-							<li><a href="#">新闻添加</a></li>
-							<li><a href="#">新闻搜索</a></li>
-						</ul>
-					</li>
+				<?if(!empty($item['tid'])):?>
+                	<?if($item['id'] == '2'){?>
+                    <li>
+                    	<span class="title">网站信息</span>
+                    </li>
+                    <?}elseif($item['id'] == '4'){?>
                     <li>
                     	<span class="title">资源管理</span>
                     </li>
-					<li>
-						<a href="#" class="nav-top-item">
-							课程资源
-						</a>
-						<ul>
-							<li><a href="#">课程查看</a></li>
-							<li><a href="#">课程添加</a></li>
-							<li><a href="#">课程搜索</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" class="nav-top-item">
-							讲师资源
-						</a>
-						<ul>
-							<li><a href="#">讲师查看</a></li>
-							<li><a href="#">讲师添加</a></li>
-							<li><a href="#">讲师搜索</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" class="nav-top-item">
-							客户资源
-						</a>
-						<ul>
-							<li><a href="#">客户查看</a></li>
-							<li><a href="#">客户添加</a></li>
-							<li><a href="#">客户搜索</a></li>
-						</ul>
-					</li>
+                    <?}elseif($item['id'] == '7'){?>
                     <li>
                     	<span class="title">工作助手</span>
                     </li>
-					<li>
-						<a href="#" class="nav-top-item">
-							工作计划
-						</a>
-						<ul>
-							<li><a href="#">昨日计划</a></li>
-							<li><a href="#">今日计划</a></li>
-							<li><a href="#">明日计划</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" class="nav-top-item">
-							统计管理
-						</a>
-						<ul>
-							<li><a href="#">工作计划统计</a></li>
-							<li><a href="#">电话统计</a></li>
-						</ul>
-					</li>
+                    <?}?>
+                    <li>
+                    	<a href="<?=$item['address']?>" <?if($item['tid'] != '999'):?>onclick="return false"<?endif;?> class="nav-top-item"><?=$item['name'];?></a>
+                    	<?if(!empty($item['tid']) && $item['tid'] != '999'):?>
+                        <ul>
+                        	<?foreach(explode(',',$item['tid']) as $sub):?>
+                        		<?foreach ($menu as $k=>$v):?>
+                                	<?if ($v['id']==$sub):?><li><a href="<?=$item['address']?><?=$v['address']?>"><?=$v['name'];?></a></li><?endif;?>
+                            	<?endforeach?>
+                        	<?endforeach?>
+                        </ul>
+                    	<?endif;?>
+                    </li>
+				<?endif;?>
+				<?endforeach?>
 				</ul>
 			</div>
