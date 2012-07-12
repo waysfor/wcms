@@ -4,6 +4,7 @@ class Manage extends CI_Controller {
 	public $userid;
 	public $username;
 	public $realname;
+	public $act;
 	//public $myrole;
 	public $item;
 	function __construct(){
@@ -38,6 +39,9 @@ class Manage extends CI_Controller {
 	private function _nav(){
 		$this -> load ->model('manage_model');
 		$nav['menu'] = $this -> manage_model -> menu();
+		$this -> load -> helper('url');
+		$nav['uri1'] = $this -> uri -> segment(2,0);
+		$nav['uri2'] = $this -> uri -> segment(3,0);
 		return $this -> load -> view('manage/frame/sider/menu', $nav, true);
 	}
 	private function _header(){
@@ -47,8 +51,6 @@ class Manage extends CI_Controller {
 			$this->load->view('manage/frame/header', $header);
 		}
 	}
-	/*
-	*/
 	function index(){
 		$this -> load ->view('manage/index.php');
 	}
@@ -111,5 +113,25 @@ class Manage extends CI_Controller {
 		//跳转到登录页
 		echo '<script>window.location.href="/manage/login";</script>';
 		exit;
+	}
+	function history($act = ''){
+		switch($act){
+			case 'list':
+		$this -> load ->view('manage/index.php');
+			break;
+			case 'add':
+			break;
+			case 'add_save':
+			break;
+			case 'del':
+			break;
+			case 'edit':
+			break;
+			case 'edit_save':
+			break;
+			default:
+				show_404();
+			break;
+		}
 	}
 }

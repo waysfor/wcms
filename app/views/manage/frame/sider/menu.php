@@ -16,12 +16,13 @@
                     </li>
                     <?}?>
                     <li>
-                    	<a href="<?=$item['address']?>" <?if($item['tid'] != '999'):?>onclick="return false"<?endif;?> class="nav-top-item"><?=$item['name'];?></a>
+                    	<a href="/manage<?=$item['address']?>" <?if($item['tid'] != '999'):?>onclick="return false"<?endif;?> class="nav-top-item <? if($item['tid']=='999'){echo 'no-submenu';}?>"><?=$item['name'];?></a>
                     	<?if(!empty($item['tid']) && $item['tid'] != '999'):?>
                         <ul>
                         	<?foreach(explode(',',$item['tid']) as $sub):?>
                         		<?foreach ($menu as $k=>$v):?>
-                                	<?if ($v['id']==$sub):?><li><a href="<?=$item['address']?><?=$v['address']?>"><?=$v['name'];?></a></li><?endif;?>
+                                	<?if ($v['id']==$sub):?><li>
+                                    <a <? if(!empty($uri1) == $item['address'] && !empty($uri2) == $v['address']){echo 'class="current"';} ?> href="/manage<?=$item['address']?><?=$v['address']?>"><?=$v['name'];?></a></li><?endif;?>
                             	<?endforeach?>
                         	<?endforeach?>
                         </ul>
