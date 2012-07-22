@@ -16,7 +16,7 @@
 					<div class="tab-content default-tab" id="tab1">
 						<!-- This is the target div. id must match the href of this div's tab -->
 						<div class="notification attention png_bg">
-							<a href="#" class="close"><img src="public/manage/images/icons/cross_grey_small.png" title="Close this notification" alt="close" /></a>
+							<a href="#" class="close"><img src="http://www.wcms.dev/public/manage/images/icons/cross_grey_small.png" title="Close this notification" alt="close" /></a>
 							<div>
 								This is a Content Box. You can put whatever you want in it. By the way, you can close this notification with the top-right cross.
 							</div>
@@ -64,9 +64,9 @@
 									<td>Donec tortor diam</td>
 									<td>
 										<!-- Icons -->
-										 <a href="#" title="Edit"><img src="public/manage/images/icons/pencil.png" alt="Edit" /></a>
-										 <a href="#" title="Delete"><img src="public/manage/images/icons/cross.png" alt="Delete" /></a> 
-										 <a href="#" title="Edit Meta"><img src="public/manage/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
+										 <a href="#" title="Edit"><img src="http://www.wcms.dev/public/manage/images/icons/pencil.png" alt="Edit" /></a>
+										 <a href="#" title="Delete"><img src="http://www.wcms.dev/public/manage/images/icons/cross.png" alt="Delete" /></a> 
+										 <a href="#" title="Edit Meta"><img src="http://www.wcms.dev/public/manage/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
 									</td>
 								</tr>
 								<tr>
@@ -77,9 +77,9 @@
 									<td>Donec tortor diam</td>
 									<td>
 										<!-- Icons -->
-										 <a href="#" title="Edit"><img src="public/manage/images/icons/pencil.png" alt="Edit" /></a>
-										 <a href="#" title="Delete"><img src="public/manage/images/icons/cross.png" alt="Delete" /></a> 
-										 <a href="#" title="Edit Meta"><img src="public/manage/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
+										 <a href="#" title="Edit"><img src="http://www.wcms.dev/public/manage/images/icons/pencil.png" alt="Edit" /></a>
+										 <a href="#" title="Delete"><img src="http://www.wcms.dev/public/manage/images/icons/cross.png" alt="Delete" /></a> 
+										 <a href="#" title="Edit Meta"><img src="http://www.wcms.dev/public/manage/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
 									</td>
 								</tr>
 								<tr>
@@ -90,9 +90,9 @@
 									<td>Donec tortor diam</td>
 									<td>
 										<!-- Icons -->
-										 <a href="#" title="Edit"><img src="public/manage/images/icons/pencil.png" alt="Edit" /></a>
-										 <a href="#" title="Delete"><img src="public/manage/images/icons/cross.png" alt="Delete" /></a> 
-										 <a href="#" title="Edit Meta"><img src="public/manage/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
+										 <a href="#" title="Edit"><img src="http://www.wcms.dev/public/manage/images/icons/pencil.png" alt="Edit" /></a>
+										 <a href="#" title="Delete"><img src="http://www.wcms.dev/public/manage/images/icons/cross.png" alt="Delete" /></a> 
+										 <a href="#" title="Edit Meta"><img src="http://www.wcms.dev/public/manage/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
 									</td>
 								</tr>
 								<tr>
@@ -103,9 +103,9 @@
 									<td>Donec tortor diam</td>
 									<td>
 										<!-- Icons -->
-										 <a href="#" title="Edit"><img src="public/manage/images/icons/pencil.png" alt="Edit" /></a>
-										 <a href="#" title="Delete"><img src="public/manage/images/icons/cross.png" alt="Delete" /></a> 
-										 <a href="#" title="Edit Meta"><img src="public/manage/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
+										 <a href="#" title="Edit"><img src="http://www.wcms.dev/public/manage/images/icons/pencil.png" alt="Edit" /></a>
+										 <a href="#" title="Delete"><img src="http://www.wcms.dev/public/manage/images/icons/cross.png" alt="Delete" /></a> 
+										 <a href="#" title="Edit Meta"><img src="http://www.wcms.dev/public/manage/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
 									</td>
 								</tr>
 								<tr>
@@ -116,9 +116,9 @@
 									<td>Donec tortor diam</td>
 									<td>
 										<!-- Icons -->
-										 <a href="#" title="Edit"><img src="public/manage/images/icons/pencil.png" alt="Edit" /></a>
-										 <a href="#" title="Delete"><img src="public/manage/images/icons/cross.png" alt="Delete" /></a> 
-										 <a href="#" title="Edit Meta"><img src="public/manage/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
+										 <a href="#" title="Edit"><img src="http://www.wcms.dev/public/manage/images/icons/pencil.png" alt="Edit" /></a>
+										 <a href="#" title="Delete"><img src="http://www.wcms.dev/public/manage/images/icons/cross.png" alt="Delete" /></a> 
+										 <a href="#" title="Edit Meta"><img src="http://www.wcms.dev/public/manage/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
 									</td>
 								</tr>
 								<tr>
@@ -129,9 +129,9 @@
 									<td>Donec tortor diam</td>
 									<td>
 										<!-- Icons -->
-										 <a href="#" title="Edit"><img src="public/manage/images/icons/pencil.png" alt="Edit" /></a>
-										 <a href="#" title="Delete"><img src="public/manage/images/icons/cross.png" alt="Delete" /></a> 
-										 <a href="#" title="Edit Meta"><img src="public/manage/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
+										 <a href="#" title="Edit"><img src="http://www.wcms.dev/public/manage/images/icons/pencil.png" alt="Edit" /></a>
+										 <a href="#" title="Delete"><img src="http://www.wcms.dev/public/manage/images/icons/cross.png" alt="Delete" /></a> 
+										 <a href="#" title="Edit Meta"><img src="http://www.wcms.dev/public/manage/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
 									</td>
 								</tr>
 								<tr>
@@ -142,9 +142,9 @@
 									<td>Donec tortor diam</td>
 									<td>
 										<!-- Icons -->
-										 <a href="#" title="Edit"><img src="public/manage/images/icons/pencil.png" alt="Edit" /></a>
-										 <a href="#" title="Delete"><img src="public/manage/images/icons/cross.png" alt="Delete" /></a> 
-										 <a href="#" title="Edit Meta"><img src="public/manage/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
+										 <a href="#" title="Edit"><img src="http://www.wcms.dev/public/manage/images/icons/pencil.png" alt="Edit" /></a>
+										 <a href="#" title="Delete"><img src="http://www.wcms.dev/public/manage/images/icons/cross.png" alt="Delete" /></a> 
+										 <a href="#" title="Edit Meta"><img src="http://www.wcms.dev/public/manage/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
 									</td>
 								</tr>
 								<tr>
@@ -155,9 +155,9 @@
 									<td>Donec tortor diam</td>
 									<td>
 										<!-- Icons -->
-										 <a href="#" title="Edit"><img src="public/manage/images/icons/pencil.png" alt="Edit" /></a>
-										 <a href="#" title="Delete"><img src="public/manage/images/icons/cross.png" alt="Delete" /></a> 
-										 <a href="#" title="Edit Meta"><img src="public/manage/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
+										 <a href="#" title="Edit"><img src="http://www.wcms.dev/public/manage/images/icons/pencil.png" alt="Edit" /></a>
+										 <a href="#" title="Delete"><img src="http://www.wcms.dev/public/manage/images/icons/cross.png" alt="Delete" /></a> 
+										 <a href="#" title="Edit Meta"><img src="http://www.wcms.dev/public/manage/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
 									</td>
 								</tr>
 							</tbody>
@@ -258,28 +258,28 @@
 
 			<!-- Start Notifications -->
 			<div class="notification attention png_bg">
-				<a href="#" class="close"><img src="public/manage/images/icons/cross_grey_small.png" title="Close this notification" alt="close" /></a>
+				<a href="#" class="close"><img src="http://www.wcms.dev/public/manage/images/icons/cross_grey_small.png" title="Close this notification" alt="close" /></a>
 				<div>
 					Attention notification. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vulputate, sapien quis fermentum luctus, libero. 
 				</div>
 			</div>
 
 			<div class="notification information png_bg">
-				<a href="#" class="close"><img src="public/manage/images/icons/cross_grey_small.png" title="Close this notification" alt="close" /></a>
+				<a href="#" class="close"><img src="http://www.wcms.dev/public/manage/images/icons/cross_grey_small.png" title="Close this notification" alt="close" /></a>
 				<div>
 					Information notification. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vulputate, sapien quis fermentum luctus, libero.
 				</div>
 			</div>
 
 			<div class="notification success png_bg">
-				<a href="#" class="close"><img src="public/manage/images/icons/cross_grey_small.png" title="Close this notification" alt="close" /></a>
+				<a href="#" class="close"><img src="http://www.wcms.dev/public/manage/images/icons/cross_grey_small.png" title="Close this notification" alt="close" /></a>
 				<div>
 					Success notification. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vulputate, sapien quis fermentum luctus, libero.
 				</div>
 			</div>
 
 			<div class="notification error png_bg">
-				<a href="#" class="close"><img src="public/manage/images/icons/cross_grey_small.png" title="Close this notification" alt="close" /></a>
+				<a href="#" class="close"><img src="http://www.wcms.dev/public/manage/images/icons/cross_grey_small.png" title="Close this notification" alt="close" /></a>
 				<div>
 					Error notification. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vulputate, sapien quis fermentum luctus, libero.
 				</div>
